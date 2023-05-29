@@ -11,13 +11,13 @@ func main() {
 	if(os.Getenv("PORT") != "") {
 		port = os.Getenv("PORT")
 	}
-	tmpl := template.Must(template.ParseFiles("src/templates/index.html"))
+	tmpl := template.Must(template.ParseFiles("templates/index.html"))
 
     http.HandleFunc("/", func (w http.ResponseWriter, r *http.Request) {
         tmpl.Execute(w, "")
     })
 
-    fs := http.FileServer(http.Dir("src/static/"))
+    fs := http.FileServer(http.Dir("static/"))
     http.Handle("/static/", http.StripPrefix("/static/", fs))
 
     http.ListenAndServe(":" + port, nil)
