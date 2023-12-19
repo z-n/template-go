@@ -1,4 +1,4 @@
-## postgres://fl0user:9IurlUO4AzeY@ep-rough-flower-21420454.ap-southeast-1.aws.neon.fl0.io:5432/kengpapa?sslmode=require
+
 
 ## Overview
 
